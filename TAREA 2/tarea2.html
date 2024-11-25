@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" href="/TAREAS 2/TAREA 2/tarea2.css" />  
+    <title>Actividad Dinámica</title>  
+</head>  
+<body>  
+    <div id="menu">  
+        <div id="toggleMenu" onclick="alternarMenu()">☰</div>  
+        <ul id="menuItems">  
+            <li onclick="mostrarBienvenida()">Inicio</li>  
+            <li onclick="mostrarFormulario()">Formulario</li>  
+        </ul>  
+    </div>  
+    <div id="content">  
+        <div id="mensajeBienvenida" class="hidden">  
+            Bienvenido al mundo web  
+            <span onclick="cerrarBienvenida()" class="close-btn">✖</span>  
+        </div>  
+
+        <button id="botonSaludar" onclick="mostrarBienvenida()">Saludar</button>  
+
+        <div id="contenedorFormulario" class="hidden">  
+            <form id="formDatos" onsubmit="return guardarDatos(event)">  
+                <label for="nombre">Nombre:</label>  
+                <input type="text" id="nombre" required />  
+                <label for="apellido">Apellido:</label>  
+                <input type="text" id="apellido" required />  
+                <label for="correo">Correo:</label>  
+                <input type="email" id="correo" required />  
+                <button type="submit">Guardar</button>  
+            </form>  
+        </div>  
+
+        <table id="tablaDatos" class="hidden">  
+            <thead>  
+                <tr>  
+                    <th>Nombre</th>  
+                    <th>Apellido</th>  
+                    <th>Correo</th>  
+                    <th>Opciones</th>  
+                </tr>  
+            </thead>  
+            <tbody id="cuerpoTabla"></tbody>  
+        </table>  
+    </div>  
+    <script src="/TAREAS 2/TAREA 2/tarea2.js"></script>  
+</body>  
+</html>
